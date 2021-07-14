@@ -1,0 +1,12 @@
+NOTE: I used polaris and not a VM when making my filesystem
+To create a file system use the following command (filesys may be replaced with the desired name and 200000 may be replaced with the desired size)
+ ./userfs -reformat 200000 filesys
+To open an existing filesystem use the following command (filesys must be replaced with the name of the desired filesystem)
+ ./userfs filesys
+
+userfs.h and userfs.c: Contain the majority of the code including main
+
+parse.h and parse.c: Contain the code for parsing commands given to the filesystem
+
+crash.h and crash.c: Contain the write and read functions that use an artificial crash mechanism th simulate random system crashes as well as a function to manually cause crashes 
+at any desired point in the code
